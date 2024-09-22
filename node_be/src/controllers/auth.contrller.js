@@ -47,9 +47,11 @@ const register = async (req, res) => {
          pass_word: passHash,
       });
 
+      const { pass_word, ...user } = userNew.dataValues;
+
       return res.status(200).json({
          message: `Đắng ký thành công`,
-         data: userNew,
+         data: user,
       });
    } catch (error) {
       // console.log(error);

@@ -78,7 +78,7 @@ const Login = ({ setUserLogin }) => {
                </div>
 
                <ReactFacebookLogin
-                  appId="379865718525321"
+                  appId="515310684555647"
                   // autoLoad={true}
                   fields="name,email,picture"
                   // onClick={componentClicked}
