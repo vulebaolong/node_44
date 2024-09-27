@@ -16,13 +16,29 @@ const options = {
 
 
 export const fetchFromAPI = async (url) => {
-  const { data } = await axios.get(`${BASE_URL}/${url}`, options);
+  const { data } = await axios.get(`${BASE_URL}/${url}`);
 
   return data;
 };
 
 export const getListVideo = async () => {
-  const {data} = await axios.get(`${BASE_URL}/videos/get-videos`, options);
+  const {data} = await axios.get(`${BASE_URL}/videos/get-videos`);
   return data;
 }
+
+export const getType = async () => {
+  const {data} = await axios.get(`${BASE_URL}/videos/get-type`);
+  return data;
+}
+
+export const getVideoById = async (typeId) => {
+  const {data} = await axios.get(`${BASE_URL}/videos/get-video-type-by-id/${typeId}`);
+  return data;
+}
+
+export const registerAPI = async (payload) => {
+  const {data} = await axios.post(`${BASE_URL}/auth/register`, payload);
+  return data;
+}
+
 
